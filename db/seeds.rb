@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# db/seeds.rb
+puts 'Creating apes...'
+Ape.create!({
+  name: "GoldenApe",
+  address: "18 Rue Beautreillis, 75004 Paris, France"
+})
+Ape.create!({
+  name: "DegenApe",
+  address: "Van Arteveldestraat 1, 1000 Brussels, Belgium"
+})
+puts 'Finished!'
