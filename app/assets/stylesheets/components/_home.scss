@@ -1,0 +1,33 @@
+
+
+.banner {
+    background-size: contain;
+    background-position: center;
+    padding: 150px 0;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 64px;
+    font-weight: bold;
+  }
+  
+  .banner p {
+    font-size: 36px;
+    color: white;
+    border-radius: 4px;
+    opacity: .90;
+    padding-left: 10px;
+
+  }
+
+  .btn.btn-warning {
+      font-size: 24px;
+      border-radius: 6px;
+      color: white;
+      background-color: #18E2B2;
+      border-color: white solid;
+      border: 3px solid;
+  }
