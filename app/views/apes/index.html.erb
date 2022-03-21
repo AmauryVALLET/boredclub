@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <div class="row"> 
+        <div class="column"> 
+
+            <h1>Bored Apes Club</h1>
+
+            <ul>
+            <% @apes.each do |ape| %>
+                <li><%= link_to ape.name, ape_path(ape) %></li>
+            <% end %>
+            </ul>
+         </div>
+    </div>
+</div>

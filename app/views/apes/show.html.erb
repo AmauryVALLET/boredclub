@@ -1,0 +1,25 @@
+  <div class="container mt-5">
+        <h1><%= @ape.name %></h1>
+        <p> <small><%= @ape.address %></small> </p>
+        <h2>
+        <%= pluralize @ape.reviews.size, "review" %>
+        </h2>
+
+        <div id="reviews">
+        <% if @ape.reviews.blank? %>
+            Be the first to review this Ape <%= @ape.name %>
+        <% else %>
+            <% @ape.reviews.each do |review| %>
+            <p><%= review.content %></p>
+            <% end %>
+        <% end %>
+        </div>
+
+        <%= simple_form_for([ @ape, @review ]) do |f| %>
+            <%= f.input :content, as: :text %>
+            <%= f.button :submit %>
+        <% end %>
+
+  </div>
+
+
