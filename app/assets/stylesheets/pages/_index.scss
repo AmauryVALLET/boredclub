@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// body {
+//     background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.3)), asset-url('rrr.jpg');
+// }
+body {
+    opacity: 1;
+    transition: opacity 1.8s ease-in 50ms;
+}

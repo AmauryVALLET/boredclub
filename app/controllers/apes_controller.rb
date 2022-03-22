@@ -18,7 +18,7 @@ class ApesController < ApplicationController
   
     def create
       @ape = Ape.new(ape_params)
-      @ape.user = current_user
+      @ape.id = current_user
       authorize @ape
   
       if @ape.save
@@ -55,7 +55,7 @@ class ApesController < ApplicationController
     end
   
     def ape_params
-      params.require(:ape).permit(:name, :address)
+      params.require(:ape).permit(:name, :address,)
     end   
 
 end
