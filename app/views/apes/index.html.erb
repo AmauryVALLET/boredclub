@@ -9,6 +9,12 @@
                 <li><%= link_to ape.name, ape_path(ape) %></li>
             <% end %>
             </ul>
+
+            <% if policy(Ape).create?%>
+            <% link_to 'New Ape', new_ape_path%>
+            <% end %>
+
          </div>
     </div>
 </div>
+
