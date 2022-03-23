@@ -17,6 +17,14 @@ class ApePolicy < ApplicationPolicy
     true
   end
 
+  def destroy?
+    true
+  end
+
+  def update?
+    true
+  end
+
   
 
 end

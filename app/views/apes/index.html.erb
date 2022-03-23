@@ -2,9 +2,16 @@
     <div class="row"> 
         <div class="column"> 
 
-            <h1>Bored Apes Club</h1>
+            <h1><strong>The Bored Apes Club<strong></h1>
 
-        
+            <div class="container">
+            <% if policy(Ape).create?%>
+            <%= link_to 'create your own', new_ape_path, class: "btn btn-warning"%>
+            <% end %>
+            </div>
+
+    
+
             <div class="col-6">
                 <ul class="container">
                     <% @apes.each do |ape| %>
@@ -14,6 +21,7 @@
                                 <h2><%= ape.name %></h2>
                                 <p><%= ape.address %></p>
                                 <%= link_to "See this Ape", ape_path(ape), class: "btn btn-warning" %>
+
                             </div>
                         </div>
                     <% end %>
@@ -24,9 +32,6 @@
 
 
 
-            <% if policy(Ape).create?%>
-            <%= link_to 'create your own', new_ape_path, class: "btn btn-warning"%>
-            <% end %>
 
 
          </div>

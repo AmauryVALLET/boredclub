@@ -42,10 +42,9 @@ class ApesController < ApplicationController
     end
   
     def destroy
-      authorize @ape
       @ape.destroy
-  
       redirect_to apes_path, notice: 'Your Ape was successfully destroyed.'
+      authorize @ape
     end
   
     private

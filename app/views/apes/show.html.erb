@@ -1,6 +1,13 @@
   <div class="container mt-5">
         <h1><%= @ape.name %></h1>
         <p> <small><%= @ape.address %></small> </p>
+
+            <%= link_to "Update your  ape",  edit_ape_path(@ape), class: "btn btn-update" %>
+            <%= link_to "Delete #{@ape.name}",
+                        ape_path(@ape),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" }, class: "btn btn-delete" %>
+
         <h2>
         <%= pluralize @ape.reviews.size, "review" %>
         </h2>
